@@ -42,27 +42,23 @@
       </div>
 
       <!-- Hero -->
-      <section class="product-hero" style="position: relative; overflow: hidden; min-height: 0;">
-        <div class="product-hero-bg">
-          <img id="heroImageBg" src="" alt="Background">
-          <div class="overlay"></div>
+      <section class="product-hero container" style="padding: 1.5rem 1rem 0.5rem; text-align: center;">
+        <div style="max-width: 160px; margin: 0 auto 1.25rem;">
+          <img id="heroImage" src="" alt="Product Image" style="width: 100%; aspect-ratio: 1/1; object-fit: cover; border-radius: 16px; box-shadow: 0 10px 25px rgba(0,0,0,0.5); border: 2px solid rgba(255,255,255,0.05);">
         </div>
-        <div class="product-hero-content container" style="padding: 1.5rem 1rem;">
-          <div class="hero-text">
-            <div class="badges" style="margin-bottom: 0.5rem;">
-              <span class="badge" id="heroBadge">Premium</span>
-            </div>
-            <h1 id="heroTitle" style="font-size: 1.6rem; margin-bottom: 0.5rem;">Product Name</h1>
-            <p id="heroDesc" style="font-size: 0.85rem; margin-bottom: 1rem; color: var(--color-text-light); line-height: 1.5;"></p>
-            <div class="hero-actions" style="display: flex; gap: 0.6rem; flex-wrap: wrap;">
-              <a href="#pricing" class="btn btn-primary" style="padding: 0.6rem 1.2rem; font-size: 0.85rem;">View Pricing</a>
-              <a href="https://wa.me/" id="heroWhatsApp" target="_blank" class="btn" style="background: #25D366; color: white; padding: 0.6rem 1.2rem; font-size: 0.85rem; display: inline-flex; align-items: center; gap: 0.4rem;">
-                <span class="material-symbols-outlined" style="font-size: 1rem;">chat</span> WhatsApp
-              </a>
-            </div>
+        
+        <div class="hero-text">
+          <div class="badges" style="margin-bottom: 0.5rem; justify-content: center; display: flex;">
+            <span class="badge" id="heroBadge" style="background: rgba(229,9,20,0.2); color: #e50914; border: 1px solid rgba(229,9,20,0.3); padding: 0.25rem 0.75rem; font-size: 0.75rem;">Premium</span>
           </div>
-          <div class="hero-image-container" style="max-width: 140px; margin-top: 1rem;">
-            <img id="heroImage" src="" alt="Product Image" style="border-radius: 12px; width: 100%;">
+          <h1 id="heroTitle" style="font-size: 1.5rem; font-weight: 800; margin-bottom: 0.5rem; color: #fff;">Product Name</h1>
+          <p id="heroDesc" style="font-size: 0.85rem; margin-bottom: 1.25rem; color: var(--color-text-light); line-height: 1.5; max-width: 400px; margin-left: auto; margin-right: auto;"></p>
+          
+          <div class="hero-actions" style="display: flex; gap: 0.75rem; justify-content: center; flex-wrap: wrap;">
+            <a href="#pricing" class="btn btn-primary" style="padding: 0.6rem 1.2rem; font-size: 0.85rem; min-width: 120px;">View Pricing</a>
+            <a href="https://wa.me/" id="heroWhatsApp" target="_blank" class="btn" style="background: linear-gradient(135deg, #25D366 0%, #1da851 100%); color: white; padding: 0.6rem 1.2rem; font-size: 0.85rem; display: inline-flex; align-items: center; justify-content: center; gap: 0.4rem; min-width: 120px; box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);">
+              <span class="material-symbols-outlined" style="font-size: 1.1rem;">chat</span> WhatsApp
+            </a>
           </div>
         </div>
       </section>
