@@ -171,7 +171,7 @@ export const products = [
     ],
     packages: [
       { name: "10 Diamond", price: "45৳" },
-      { name: "50 Diamond", price: "340৳" },
+      { name: "50 Diamond", price: "140৳" },
       { name: "100 Diamond", price: "260৳" },
       { name: "200 Diamond", price: "420৳" },
       { name: "500 Diamond", price: "1200৳" },

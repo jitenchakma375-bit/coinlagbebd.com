@@ -4,8 +4,9 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Buy digital top-ups and subscriptions at the best prices in Bangladesh. Instant delivery via WhatsApp." />
     <title>Product Details - Proyojon bd</title>
-    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="./style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
   </head>
@@ -13,13 +14,13 @@
     <!-- Header -->
     <header class="site-header">
       <div class="header-container container">
-        <a href="/" class="site-logo">
+        <a href="./index.html" class="site-logo">
           Proyojon<span class="text-accent">bd</span>
         </a>
         <nav class="header-nav" style="gap: 2rem; align-items: center; margin: 0 auto;">
-          <a href="/" class="nav-link">Services</a>
-          <a href="/pricing.html" class="nav-link">Pricing</a>
-          <a href="/support.html" class="nav-link">Support</a>
+          <a href="./index.html" class="nav-link">Services</a>
+          <a href="./pricing.html" class="nav-link">Pricing</a>
+          <a href="./support.html" class="nav-link">Support</a>
         </nav>
         <div class="search-bar" style="margin-left: auto;">
           <input type="text" placeholder="Search for Top Up & Services...">
@@ -27,10 +28,17 @@
             <span class="material-symbols-outlined">search</span>
           </button>
         </div>
+        <button class="mobile-menu-toggle" aria-label="Toggle Menu">
+          <span class="material-symbols-outlined">menu</span>
+        </button>
       </div>
     </header>
 
-    <main id="productApp" style="display: none;">
+    <main id="productApp">
+      <div class="product-loading" id="productLoading">
+        <div class="spinner"></div>
+        <p>Loading product details...</p>
+      </div>
       <!-- Hero Section -->
       <section class="product-hero">
         <div class="product-hero-bg">
@@ -87,7 +95,7 @@
       
       <!-- How to order -->
       <section class="container" style="padding: 2rem 1rem 4rem;">
-        <div class="how-to-order" style="background: var(--color-surface); padding: 3rem; border-radius: var(--radius-lg); border: 1px solid var(--color-border); text-center">
+        <div class="how-to-order" style="background: var(--color-surface); padding: 3rem; border-radius: var(--radius-lg); border: 1px solid var(--color-border); text-align: center;">
           <h2 style="text-align: center; margin-bottom: 2rem;">How to Order</h2>
           <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; text-align: center;">
             <div>
@@ -112,13 +120,28 @@
     </main>
 
     <!-- Footer -->
-    <footer class="footer">
-      <div class="footer-container">
+    <footer class="site-footer">
+      <div class="container footer-container">
         <div class="footer-col">
-          <a href="/" class="site-logo">
+          <a href="./index.html" class="site-logo">
             Proyojon<span class="text-accent">bd</span>
           </a>
           <p>Premium Digital Top Up and Subscriptions at the best BDT prices in Bangladesh.</p>
+          <div class="payment-icons">
+            <span class="payment-icon">bKash</span>
+            <span class="payment-icon">Nagad</span>
+            <span class="payment-icon">Rocket</span>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="#">About Us</a>
+          <a href="#">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <a href="#">Terms of Service</a>
+          <a href="#">Privacy Policy</a>
         </div>
       </div>
       <div class="footer-bottom">
@@ -136,6 +159,14 @@
       </a>
     </div>
 
-    <script type="module" src="/product.js"></script>
+    <script>
+      document.querySelector('.mobile-menu-toggle').addEventListener('click', function() {
+        const nav = document.querySelector('.header-nav');
+        nav.classList.toggle('open');
+        const icon = this.querySelector('.material-symbols-outlined');
+        icon.textContent = nav.classList.contains('open') ? 'close' : 'menu';
+      });
+    </script>
+    <script type="module" src="./product.js"></script>
   </body>
 </html>

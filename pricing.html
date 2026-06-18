@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Compare subscription prices for streaming services and game credits in Bangladesh. Best BDT rates with instant WhatsApp delivery." />
     <title>Subscription Price Chart (BDT) | Proyojon bd</title>
     <link rel="stylesheet" href="./style.css">
     <!-- Google Fonts: Inter -->
@@ -15,13 +16,13 @@
     <!-- Top Header -->
     <header class="site-header">
       <div class="container header-container">
-        <a href="/" class="site-logo">
+        <a href="./index.html" class="site-logo">
           Proyojon<span class="text-accent">bd</span>
         </a>
         <nav class="header-nav" style="gap: 2rem; align-items: center; margin: 0 auto;">
-          <a href="/" class="nav-link">Services</a>
-          <a href="/pricing.html" class="nav-link" style="color: var(--color-white); font-weight: 700;">Pricing</a>
-          <a href="/support.html" class="nav-link">Support</a>
+          <a href="./index.html" class="nav-link">Services</a>
+          <a href="./pricing.html" class="nav-link" style="color: var(--color-text); font-weight: 700;">Pricing</a>
+          <a href="./support.html" class="nav-link">Support</a>
         </nav>
         
         <div class="search-bar" style="margin-left: auto;">
@@ -30,6 +31,9 @@
             <span class="material-symbols-outlined">search</span>
           </button>
         </div>
+        <button class="mobile-menu-toggle" aria-label="Toggle Menu">
+          <span class="material-symbols-outlined">menu</span>
+        </button>
       </div>
     </header>
 
@@ -52,10 +56,25 @@
     <footer class="site-footer">
       <div class="container footer-container">
         <div class="footer-col">
-          <a href="/" class="site-logo">
+          <a href="./index.html" class="site-logo">
             Proyojon<span class="text-accent">bd</span>
           </a>
           <p>Bangladesh's #1 digital subscription store. Cheapest BDT prices. Instant delivery via WhatsApp.</p>
+          <div class="payment-icons">
+            <span class="payment-icon">bKash</span>
+            <span class="payment-icon">Nagad</span>
+            <span class="payment-icon">Rocket</span>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="#">About Us</a>
+          <a href="#">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <a href="#">Terms of Service</a>
+          <a href="#">Privacy Policy</a>
         </div>
       </div>
       <div class="footer-bottom">
@@ -73,6 +92,14 @@
       </a>
     </div>
     
-    <script type="module" src="/pricing.js"></script>
+    <script>
+      document.querySelector('.mobile-menu-toggle').addEventListener('click', function() {
+        const nav = document.querySelector('.header-nav');
+        nav.classList.toggle('open');
+        const icon = this.querySelector('.material-symbols-outlined');
+        icon.textContent = nav.classList.contains('open') ? 'close' : 'menu';
+      });
+    </script>
+    <script type="module" src="./pricing.js"></script>
   </body>
 </html>

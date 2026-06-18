@@ -1,4 +1,3 @@
-import './style.css';
 import { products, whatsappNumber } from './data.js';
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -6,14 +5,14 @@ document.addEventListener('DOMContentLoaded', () => {
   const productId = urlParams.get('id');
 
   if (!productId) {
-    window.location.href = '/';
+    window.location.href = './index.html';
     return;
   }
 
   const product = products.find(p => p.id === productId);
   
   if (!product) {
-    window.location.href = '/';
+    window.location.href = './index.html';
     return;
   }
 
@@ -81,6 +80,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelector('.faq-section').style.display = 'none';
   }
 
-  // Show App
-  document.getElementById('productApp').style.display = 'block';
+  // Hide loading spinner
+  const loadingEl = document.getElementById('productLoading');
+  if (loadingEl) loadingEl.style.display = 'none';
 });

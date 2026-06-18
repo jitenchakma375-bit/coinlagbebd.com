@@ -1,4 +1,3 @@
-import './style.css';
 import { products } from './data.js';
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -71,7 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
       </div>
 
       <div style="padding: 1.25rem; background: rgba(255,255,255,0.01);">
-        <a href="/product.html?id=${product.id}" style="display: flex; align-items: center; justify-content: center; gap: 0.5rem; width: 100%; padding: 0.85rem; border-radius: var(--radius-md); border: 1px solid rgba(255,255,255,0.1); color: var(--color-text); font-weight: 700; text-decoration: none; transition: background 0.3s;" onmouseover="this.style.background='rgba(255,255,255,0.1)'" onmouseout="this.style.background='transparent'">
+        <a href="./product.html?id=${product.id}" style="display: flex; align-items: center; justify-content: center; gap: 0.5rem; width: 100%; padding: 0.85rem; border-radius: var(--radius-md); border: 1px solid rgba(255,255,255,0.1); color: var(--color-text); font-weight: 700; text-decoration: none; transition: background 0.3s;" onmouseover="this.style.background='rgba(255,255,255,0.1)'" onmouseout="this.style.background='transparent'">
           Buy ${product.name} Now <span class="material-symbols-outlined" style="font-size: 1.1rem;">arrow_forward</span>
         </a>
       </div>
