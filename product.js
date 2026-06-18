@@ -12,7 +12,6 @@ document.addEventListener('DOMContentLoaded', () => {
   document.title = `${product.name} - CoinLagbeBD`;
 
   // Hero
-  document.getElementById('heroImageBg').src = product.image;
   document.getElementById('heroImage').src = product.image;
   document.getElementById('heroTitle').textContent = product.name;
   document.getElementById('heroDesc').textContent = product.description;
