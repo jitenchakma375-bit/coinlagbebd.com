@@ -42,34 +42,15 @@ document.addEventListener('DOMContentLoaded', () => {
     card.onmouseover = () => card.style.borderColor = 'rgba(255,255,255,0.2)';
     card.onmouseout = () => card.style.borderColor = 'var(--color-border)';
 
-    let icon = 'star';
-    let bgColor = 'var(--color-primary)';
-
-    switch(product.id.toLowerCase()) {
-      case 'spotify': icon = 'music_note'; bgColor = '#1DB954'; break;
-      case 'facebook': icon = 'thumb_up'; bgColor = '#1877F2'; break;
-      case 'likee': icon = 'favorite'; bgColor = '#FF0050'; break;
-      case 'chamet': icon = 'videocam'; bgColor = '#E91E63'; break;
-      case 'bigo': icon = 'live_tv'; bgColor = '#00E5FF'; break;
-      case 'tango': icon = 'payments'; bgColor = '#F97316'; break;
-      case 'imo': icon = 'chat'; bgColor = '#1877F2'; break;
-      case 'mico': icon = 'mic'; bgColor = '#FFC107'; break;
-      default:
-        if(product.category === 'streaming') { icon = 'play_circle'; bgColor = '#E50914'; }
-        else if(product.category === 'social') { icon = 'thumb_up'; bgColor = '#1877F2'; }
-        else if(product.category === 'coins') { icon = 'diamond'; bgColor = '#F5A623'; }
-    }
 
     card.innerHTML = `
-      <!-- Card Header -->
-      <div style="padding: 0.75rem; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--color-border); background: rgba(255,255,255,0.02);">
-        <div style="display: flex; align-items: center; gap: 0.5rem;">
-          <div style="width: 2rem; height: 2rem; border-radius: 8px; background-color: ${bgColor}; display: flex; align-items: center; justify-content: center; color: white; flex-shrink: 0;">
-            <span class="material-symbols-outlined" style="font-size: 1rem;">${icon}</span>
-          </div>
-          <h2 style="font-size: 0.82rem; font-weight: 700; color: var(--color-text); margin: 0; line-height: 1.2;">${product.name}</h2>
+      <!-- Card Header with product image -->
+      <div style="position: relative; overflow: hidden;">
+        <img src="${product.image}" alt="${product.name}" style="width: 100%; aspect-ratio: 1/1; object-fit: cover; display: block;">
+        <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 0.4rem 0.6rem; background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, transparent 100%);">
+          <h2 style="font-size: 0.78rem; font-weight: 700; color: #fff; margin: 0; line-height: 1.2;">${product.name}</h2>
         </div>
-        <span style="font-size: 0.62rem; font-weight: 700; padding: 0.15rem 0.5rem; background: rgba(255,255,255,0.08); color: var(--color-text-light); border-radius: 9999px; white-space: nowrap; flex-shrink: 0;">
+        <span style="position: absolute; top: 0.4rem; right: 0.4rem; font-size: 0.6rem; font-weight: 700; padding: 0.15rem 0.45rem; background: rgba(229,9,20,0.85); color: #fff; border-radius: 9999px;">
           ${product.packages.length} opts
         </span>
       </div>
@@ -90,6 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
         </a>
       </div>
     `;
+
 
     grid.appendChild(card);
   });
