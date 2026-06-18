@@ -435,21 +435,21 @@ a {
 .site-footer {
   background-color: rgba(2, 6, 23, 0.95);
   color: var(--color-text-light);
-  padding: 4rem 1rem 2rem;
-  margin-top: 4rem;
+  padding: 2rem 1rem 1rem;
+  margin-top: 2rem;
   border-top: 1px solid var(--color-border);
 }
 
 .footer-container {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr;
-  gap: 3rem;
-  margin-bottom: 3rem;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 
 .footer-col h4 {
-  font-size: 1.125rem;
-  margin-bottom: 1.5rem;
+  font-size: 0.85rem;
+  margin-bottom: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 1px;
   color: var(--color-text);
@@ -458,7 +458,8 @@ a {
 .footer-col a {
   display: block;
   color: var(--color-text-light);
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.4rem;
+  font-size: 0.85rem;
   transition: color 0.3s ease;
 }
 
@@ -479,10 +480,10 @@ a {
 
 .footer-bottom {
   text-align: center;
-  padding-top: 2rem;
+  padding-top: 1rem;
   border-top: 1px solid var(--color-border);
   color: var(--color-text-light);
-  font-size: 0.875rem;
+  font-size: 0.8rem;
 }
 
 /* Floating Actions */
@@ -1483,10 +1484,55 @@ details[open] summary ~ * {
     font-size: 0.8rem;
   }
 
-  /* Footer */
+  /* Footer - compact on mobile */
+  .site-footer {
+    padding: 1.25rem 0.75rem 0.75rem !important;
+    margin-top: 1rem !important;
+  }
+
   .footer-container {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 1rem !important;
+    margin-bottom: 1rem !important;
+  }
+
+  .footer-col:first-child {
+    grid-column: 1 / -1;
+  }
+
+  .footer-col .site-logo {
+    font-size: 1rem !important;
+    margin-bottom: 0.4rem !important;
+  }
+
+  .footer-col p {
+    font-size: 0.75rem !important;
+    margin-bottom: 0.5rem !important;
+  }
+
+  .footer-col h4 {
+    font-size: 0.75rem !important;
+    margin-bottom: 0.5rem !important;
+  }
+
+  .footer-col a {
+    font-size: 0.78rem !important;
+    margin-bottom: 0.3rem !important;
+  }
+
+  .payment-icons {
+    gap: 0.4rem !important;
+    flex-wrap: wrap;
+  }
+
+  .payment-icon {
+    padding: 0.2rem 0.5rem !important;
+    font-size: 0.7rem !important;
+  }
+
+  .footer-bottom {
+    padding-top: 0.75rem !important;
+    font-size: 0.72rem !important;
   }
 
   /* Packages section no extra top padding */
