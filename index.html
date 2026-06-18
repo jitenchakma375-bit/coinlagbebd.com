@@ -13,51 +13,37 @@
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
   </head>
   <body>
-    <!-- Top Header -->
-    <header class="site-header">
-      <div class="container header-container">
-        <a href="./index.html" class="site-logo">
-          Proyojon<span class="text-accent">bd</span>
+    <!-- Header -->
+    <header class="voucher-header">
+      <div class="container header-container" style="justify-content: space-between; align-items: center; padding: 0.5rem 1rem;">
+        <a href="/" class="voucher-logo">
+          <span style="color: #e50914; font-size: 1.5rem; font-weight: 900;">V</span>oucher<span style="color: #e50914; font-weight: 900;">BD</span>
         </a>
-        <nav class="header-nav" style="gap: 2rem; align-items: center; margin: 0 auto;">
-          <a href="./index.html" class="nav-link">Services</a>
-          <a href="./pricing.html" class="nav-link">Pricing</a>
-          <a href="./support.html" class="nav-link">Support</a>
-        </nav>
-        
-        <div class="search-bar" style="margin-left: auto;">
-          <input type="text" placeholder="Search for Top Up & Services...">
-          <button class="search-btn" aria-label="Search">
-            <span class="material-symbols-outlined">search</span>
-          </button>
-        </div>
-        <button class="mobile-menu-toggle" aria-label="Toggle Menu">
-          <span class="material-symbols-outlined">menu</span>
-        </button>
-
+        <a href="#" class="login-btn">LOGIN</a>
       </div>
     </header>
+    <!-- Search Bar -->
+    <div class="voucher-search-wrapper">
+      <div class="container voucher-search-container">
+        <input type="text" placeholder="প্রোডাক্ট নাম লিখে সার্চ করুন..." class="voucher-search-input">
+        <button class="voucher-search-btn" aria-label="Search">
+          <span class="material-symbols-outlined">search</span>
+        </button>
+      </div>
+    </div>
 
-    <!-- Main Content -->
-    <main class="site-content">
-      <!-- Hero Section -->
-      <section class="hero-section-home">
-        <h1>Bangladesh's Cheapest Digital Top-Up Store</h1>
-        <p>Get Spotify, Netflix, Facebook Stars, game credits & more at the best BDT prices. Instant delivery via WhatsApp.</p>
-        <div class="hero-badges">
-          <span class="hero-badge"><span class="material-symbols-outlined">bolt</span> Instant Delivery</span>
-          <span class="hero-badge"><span class="material-symbols-outlined">verified</span> 100% Safe</span>
-          <span class="hero-badge"><span class="material-symbols-outlined">support_agent</span> 24/7 Support</span>
-        </div>
-      </section>
+    <!-- Banner -->
+    <div class="voucher-banner">
+      <img src="./src/assets/hero.png" alt="Promo Banner" class="banner-img">
+    </div>
 
+    <main class="site-content" style="padding-top: 2rem; min-height: 100vh;">
       <div class="container">
+        <!-- Most Popular Title -->
+        <h2 class="section-title text-center" style="font-size: 2.5rem; font-weight: 800; color: #fff; margin-bottom: 2rem;">Most Popular</h2>
+        
         <!-- Product Listing -->
-        <section id="packages" class="packages-section" style="padding-top: 8rem;">
-          <div class="section-header">
-            <h2><span class="material-symbols-outlined text-accent">storefront</span> Top Up Packages</h2>
-            <p>Choose your desired package. Instant delivery via WhatsApp.</p>
-          </div>
+        <section id="packages" class="packages-section">
 
           <div class="category-filters" id="categoryFilters">
             <button class="filter-btn active" data-filter="all">All</button>
