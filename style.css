@@ -676,19 +676,22 @@ a {
 
 /* VoucherBD Redesign Styles */
 :root {
-  --color-background-start: #0f0514; /* very dark purple */
-  --color-background-end: #1a0b26;
-  --color-surface: #1e0b2d;
-  --color-primary: #e50914; /* Red */
+  --color-background-start: #0d0118;
+  --color-background-end: #0d0118;
+  --color-surface: #0d0118;
+  --color-primary: #e50914;
 }
 
 body {
-  background: linear-gradient(135deg, var(--color-background-start) 0%, var(--color-background-end) 100%);
+  background: #0d0118;
 }
 
 .voucher-header {
-  background: var(--color-surface);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  background: #0d0118;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 .voucher-logo {
@@ -698,41 +701,110 @@ body {
   font-size: 1.5rem;
   font-weight: 900;
   color: #fff;
+  flex-shrink: 0;
+}
+
+/* Desktop nav (hidden on mobile) */
+.mobile-nav {
+  display: none;
+  gap: 1.5rem;
+  align-items: center;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .mobile-nav {
+    display: flex;
+  }
+  .hamburger-btn {
+    display: none !important;
+  }
+  .mobile-dropdown {
+    display: none !important;
+  }
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
 }
 
 .login-btn {
   background: #e50914;
   color: #fff;
   text-decoration: none;
-  padding: 0.5rem 1.5rem;
+  padding: 0.45rem 1.2rem;
   font-weight: 700;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
+  border-radius: 4px;
   transition: opacity 0.3s;
 }
 
 .login-btn:hover {
-  opacity: 0.9;
+  opacity: 0.85;
+}
+
+/* Hamburger button - mobile only */
+.hamburger-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  padding: 0.25rem;
+}
+
+/* Mobile dropdown */
+.mobile-dropdown {
+  display: none;
+  background: #160a22;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  padding: 0;
+}
+
+.mobile-dropdown.open {
+  display: flex;
+  flex-direction: column;
+}
+
+.mobile-nav-link {
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  font-size: 1rem;
+  transition: background 0.2s;
+}
+
+.mobile-nav-link:hover {
+  background: rgba(229, 9, 20, 0.1);
+  color: #e50914;
 }
 
 .voucher-search-wrapper {
-  background: var(--color-surface);
+  background: #0d0118;
   padding: 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .voucher-search-container {
   display: flex;
   align-items: stretch;
+  max-width: 100%;
 }
 
 .voucher-search-input {
   flex-grow: 1;
-  padding: 1rem;
+  padding: 0.875rem 1rem;
   border: none;
   outline: none;
   font-size: 1rem;
-  background: transparent;
+  background: rgba(255,255,255,0.05);
   color: #fff;
+  min-width: 0;
 }
 
 .voucher-search-btn {

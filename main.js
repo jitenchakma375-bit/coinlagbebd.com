@@ -72,7 +72,7 @@ function setupFilters() {
 }
 
 function setupSearch() {
-  const searchInput = document.querySelector('.search-bar input');
+  const searchInput = document.getElementById('mainSearchInput');
   if (!searchInput) return;
 
   searchInput.addEventListener('input', (e) => {
@@ -86,14 +86,14 @@ function setupSearch() {
 }
 
 function setupMobileMenu() {
-  const toggle = document.querySelector('.mobile-menu-toggle');
-  const nav = document.querySelector('.header-nav');
-  if (!toggle || !nav) return;
+  const btn = document.getElementById('hamburgerBtn');
+  const dropdown = document.getElementById('mobileDropdown');
+  if (!btn || !dropdown) return;
 
-  toggle.addEventListener('click', () => {
-    nav.classList.toggle('open');
-    const icon = toggle.querySelector('.material-symbols-outlined');
-    icon.textContent = nav.classList.contains('open') ? 'close' : 'menu';
+  btn.addEventListener('click', () => {
+    dropdown.classList.toggle('open');
+    const icon = btn.querySelector('.material-symbols-outlined');
+    icon.textContent = dropdown.classList.contains('open') ? 'close' : 'menu';
   });
 }
 
