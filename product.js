@@ -8,8 +8,41 @@ document.addEventListener('DOMContentLoaded', () => {
   const product = products.find(p => p.id === productId);
   if (!product) { window.location.href = './index.html'; return; }
 
-  // Page title
+  // Page title & SEO Meta Tags
   document.title = `${product.name} - CoinLagbeBD`;
+  document.getElementById('meta-desc').content = product.description;
+  document.getElementById('meta-canonical').href = `https://coinlagbebd.com/product.html?id=${product.id}`;
+  
+  // OG Tags
+  document.getElementById('og-url').content = `https://coinlagbebd.com/product.html?id=${product.id}`;
+  document.getElementById('og-title').content = `${product.name} - CoinLagbeBD`;
+  document.getElementById('og-desc').content = product.description;
+  
+  // Twitter Tags
+  document.getElementById('twitter-title').content = `${product.name} - CoinLagbeBD`;
+  document.getElementById('twitter-desc').content = product.description;
+
+  // JSON-LD Product Schema
+  const lowestPrice = product.packages.length > 0 ? parseFloat(product.packages[0].price.replace(/[^0-9.]/g, '')) : 0;
+  
+  const schema = {
+    "@context": "https://schema.org/",
+    "@type": "Product",
+    "name": product.name,
+    "image": `https://coinlagbebd.com${product.image}`,
+    "description": product.description,
+    "offers": {
+      "@type": "AggregateOffer",
+      "priceCurrency": "BDT",
+      "lowPrice": lowestPrice || 100,
+      "offerCount": product.packages.length
+    }
+  };
+
+  const script = document.createElement('script');
+  script.type = 'application/ld+json';
+  script.text = JSON.stringify(schema);
+  document.head.appendChild(script);
 
   // Hero
   document.getElementById('heroImage').src = product.image;
