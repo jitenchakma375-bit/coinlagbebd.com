@@ -9,17 +9,17 @@ document.addEventListener('DOMContentLoaded', () => {
   if (!product) { window.location.href = './index.html'; return; }
 
   // Page title & SEO Meta Tags
-  document.title = `${product.name} - CoinLagbeBD`;
+  document.title = `${product.name} - CoinBD`;
   document.getElementById('meta-desc').content = product.description;
-  document.getElementById('meta-canonical').href = `https://coinlagbebd.com/product.html?id=${product.id}`;
+  document.getElementById('meta-canonical').href = `https://coinbd.org/product.html?id=${product.id}`;
   
   // OG Tags
-  document.getElementById('og-url').content = `https://coinlagbebd.com/product.html?id=${product.id}`;
-  document.getElementById('og-title').content = `${product.name} - CoinLagbeBD`;
+  document.getElementById('og-url').content = `https://coinbd.org/product.html?id=${product.id}`;
+  document.getElementById('og-title').content = `${product.name} - CoinBD`;
   document.getElementById('og-desc').content = product.description;
   
   // Twitter Tags
-  document.getElementById('twitter-title').content = `${product.name} - CoinLagbeBD`;
+  document.getElementById('twitter-title').content = `${product.name} - CoinBD`;
   document.getElementById('twitter-desc').content = product.description;
 
   // JSON-LD Product Schema
@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
     "@context": "https://schema.org/",
     "@type": "Product",
     "name": product.name,
-    "image": `https://coinlagbebd.com${product.image}`,
+    "image": `https://coinbd.org${product.image}`,
     "description": product.description,
     "offers": {
       "@type": "AggregateOffer",
@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('heroDesc').textContent = product.description;
   document.getElementById('heroBadge').textContent = product.badge;
 
-  const baseMsg = `Hello CoinLagbeBD! I want to order:\n*Service:* ${product.name}\n*Plan:* Best Plan\n\nPlease confirm my order. Thank you!`;
+  const baseMsg = `Hello CoinBD! I want to order:\n*Service:* ${product.name}\n*Plan:* Best Plan\n\nPlease confirm my order. Thank you!`;
   document.getElementById('heroWhatsApp').href = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(baseMsg)}`;
 
   // Features - compact cards
@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Pricing Packages - compact 2-col grid
   document.getElementById('pricingGrid').innerHTML = product.packages.map(pkg => {
-    const msg = `Hello CoinLagbeBD!\n\nI want to order:\n*Service:* ${product.name}\n*Plan:* ${pkg.name}\n*Price:* ${pkg.price}\n\nPlease confirm. Thank you!`;
+    const msg = `Hello CoinBD!\n\nI want to order:\n*Service:* ${product.name}\n*Plan:* ${pkg.name}\n*Price:* ${pkg.price}\n\nPlease confirm. Thank you!`;
     const link = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(msg)}`;
     return `
       <div style="background: var(--color-surface); padding: 1rem 0.75rem; border-radius: 10px; border: 1px solid var(--color-border); text-align: center; display: flex; flex-direction: column; gap: 0.6rem; transition: border-color 0.3s;" onmouseover="this.style.borderColor='rgba(229,9,20,0.5)'" onmouseout="this.style.borderColor='var(--color-border)'">

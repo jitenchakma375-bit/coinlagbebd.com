@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://coinlagbebd.com/sitemap.xml
+Sitemap: https://coinbd.org/sitemap.xml
