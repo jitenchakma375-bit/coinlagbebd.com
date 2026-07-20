@@ -227,6 +227,52 @@ export const products = [
       { name: "805 Coin", price: "1600৳" },
       { name: "2100 Coin", price: "3200৳" }
     ]
+  },
+  {
+    id: 'ott-zone',
+    name: "OTT Zone",
+    category: "streaming",
+    image: "/images/youtube.png",
+    badge: "Premium",
+    description: "Enjoy ad-free streaming, offline downloads, and background play with OTT Zone (YouTube Premium).",
+    features: [
+      { icon: "play_circle_filled", title: "Ad-Free Streaming", desc: "Watch videos without interruptions." },
+      { icon: "download", title: "Offline Downloads", desc: "Save videos and watch them offline." },
+      { icon: "music_video", title: "Background Play", desc: "Keep playing videos while using other apps." }
+    ],
+    faqs: [
+      { q: "How do I activate the premium?", a: "We will send an invitation link or upgrade your existing account." },
+      { q: "Is this safe for my main account?", a: "Yes, 100% safe. We use official upgrade methods." }
+    ],
+    packages: [
+      { name: "1 Month", price: "120৳" },
+      { name: "3 Month", price: "350৳" },
+      { name: "6 Month", price: "680৳" },
+      { name: "1 Year", price: "1700৳" }
+    ]
+  },
+  {
+    id: 'netflix',
+    name: "Netflix",
+    category: "streaming",
+    image: "/images/netflix.png",
+    badge: "Movies",
+    description: "Watch unlimited movies, TV shows, and more. Enjoy high-quality streaming on your devices.",
+    features: [
+      { icon: "movie", title: "Unlimited Movies & TV", desc: "Watch all your favorite shows." },
+      { icon: "devices", title: "Watch Anywhere", desc: "Stream on your phone, tablet, laptop, and TV." },
+      { icon: "hd", title: "High Quality", desc: "Enjoy up to 4K Ultra HD streaming." }
+    ],
+    faqs: [
+      { q: "How do I receive my account?", a: "We will provide you with the account login details after payment." },
+      { q: "Can I renew the same account?", a: "Yes, you can renew your subscription with us." }
+    ],
+    packages: [
+      { name: "1 Screen 1 Month", price: "320৳" },
+      { name: "2 Screen 2 Month", price: "600৳" },
+      { name: "1 Screen 3 Month", price: "920৳" },
+      { name: "1 Year", price: "2500৳" }
+    ]
   }
 ];
 
